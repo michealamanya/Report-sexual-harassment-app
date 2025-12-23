@@ -6,6 +6,7 @@ import 'counseling_screen.dart';
 import 'legal_guidance_screen.dart';
 import 'emergency_contacts_screen.dart';
 import 'medical_support_screen.dart';
+import '../constants/emergency_constants.dart';
 
 /// Main hub for all support services
 /// Designed with victim-centered, trauma-informed approach
@@ -69,8 +70,8 @@ class _SupportHomeScreenState extends State<SupportHomeScreen> {
               if (_priorityContacts.isNotEmpty) ...[
                 _buildSectionHeader('Emergency Help'),
                 EmergencyButton(
-                  label: 'Call Emergency Services',
-                  phoneNumber: '911',
+                  label: EmergencyConstants.emergencyLabel,
+                  phoneNumber: EmergencyConstants.emergencyNumber,
                   backgroundColor: Colors.red[700],
                 ),
                 const SizedBox(height: 8),
